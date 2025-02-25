@@ -6,6 +6,7 @@ WORKDIR /app
 
 # 필수 패키지 설치 (git, gcc, python3-dev)
 RUN apt-get update && apt-get install -y git gcc python3-dev
+RUN pip install django
 
 COPY ./requirements.txt app/requirements.txt
 
